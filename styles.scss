@@ -1,0 +1,41 @@
+$color : hsl(9, 100%, 64%); // tomato === hsl(9, 100%, 64%)
+
+body, html {
+	height: 100%;
+}
+
+.content-wrapper {
+	display : grid;
+	grid-template-columns: repeat(12, fr);
+	grid-template-rows: 200px minmax(600px, auto) 100px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+
+	.header {
+		background-color: lighten($color, 30%);
+		border: 1px solid $color;
+		grid-column: 1 / 12;
+		grid-row: 1 / 2;
+	}
+
+	.content {
+		border: 1px solid $color;
+		grid-column: 1 / 10;
+		grid-row: 2 / 3;
+	}
+
+	.sidebar {
+		border: 1px solid $color;
+		grid-column: 10 / 12;
+		grid-row: 2 / 3;
+	}
+
+	.footer {
+		border: 1px solid $color;
+		grid-column: 1 / 12;
+		grid-row: 3 / 4;
+	}
+
+}
