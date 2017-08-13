@@ -1,8 +1,117 @@
-$color : hsl(9, 100%, 64%); // tomato === hsl(9, 100%, 64%)
+$color: tomato;
 
-body, html {
-	height: 100%;
+
+/*
+@styleguide
+# Overview
+ 
+1 column theme of postcss-style-guide
+
+
+*/
+
+/*
+
+@styleguide
+
+
+## Buttons
+
+Use the button classes on and `<a>`, `<button>`, `<input>` elements.
+
+<button class="button button--large button--red">Red Button</button>
+
+    <button class="button button--large button--red">Red Button</button>
+
+<button class="button button--large button--blue">Red Button</button>
+
+    <button class="button button--large button--blue">Red Button</button>
+*/
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
 }
+
+.button--large {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.button--red {
+    color: #fff;
+    background-color: tomato;
+}
+
+.button--blue {
+    color: #fff;
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+@styleguide
+
+## Headings
+
+Use the heading tags blah blah.......
+
+<h1>Some heading here</h1>
+	
+	<h1>SOme heading here</h1>
+
+<h2>Some heading here</h2>
+	
+	<h2>SOme heading here</h2>
+
+<h3>Some heading here</h3>
+	
+	<h3>SOme heading here</h3>
+
+<h4>Some heading here</h4>
+	
+	<h4>SOme heading here</h4>
+
+<h5>Some heading here</h5>
+	
+	<h5>SOme heading here</h5>
+
+<h6>Some heading here</h6>
+	
+	<h6>SOme heading here</h6>
+
+*/
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 28px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 16px;
+}
+h6 {
+	font-size: 12px;
+}
+
+
 
 .content-wrapper {
 	display : grid;

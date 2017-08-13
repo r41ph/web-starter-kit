@@ -19,7 +19,11 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
-    "postcss-focus": "^1.0.0"
+    "postcss-focus": "^1.0.0",
+    "postcss-style-guide": "^0.14.0",
+    "psg-theme-1column": "^0.4.0",
+    "psg-theme-forest": "^0.2.0",
+    "psg-theme-material-design": "0.0.1"
   },
   "scripts": {
     "start": "browser-sync start --server --files './*.*'"

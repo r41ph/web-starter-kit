@@ -11,6 +11,8 @@ var focus = require('postcss-focus');
 var csslint = require('gulp-csslint');
 var htmlReporter = require('gulp-csslint-report');
 var uncss = require('gulp-uncss');
+var styleGuide = require('postcss-style-guide');
+
 // Javascript
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
@@ -26,7 +28,7 @@ gulp.task('serve', () => {
 
      gulp.watch("./*.scss", ['css']).on('change', browserSync.reload);
      gulp.watch("./*.html").on('change', browserSync.reload);
-     gulp.watch('./*.js', ['scripts']).on('change', browserSync.reload);;
+     gulp.watch('./*.js', ['scripts']).on('change', browserSync.reload);
 });
 
 // Transpiling scss, autoprefix, minifying, sourcemaps and :focus
@@ -37,8 +39,16 @@ gulp.task('css', () => {
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ require('postcss-focus') ]))
         .pipe(postcss([ autoprefixer({ grid: false}) ])) //  IE supports only grid-row with / and span. You should add grid: false option to Autoprefixer and use some JS grid polyfill for full spec support
-        .pipe(csslint())
-        .pipe(csslint.formatter())
+        // .pipe(csslint())
+        // .pipe(csslint.formatter())
+        .pipe(postcss([
+            styleGuide({
+                project: 'Project name (change it in gulp file)',
+                dest: 'styleguide/index.html',
+                showCode: false,
+                theme: '1column' // 1column => npm install psg-theme-1column --save-dev  (google for more if you want a diff theme)
+            })
+        ]))
         .pipe(htmlReporter({
             'filename': 'csslint-report.html',
             'directory': './csslint-reports/'
@@ -75,6 +85,10 @@ gulp.task('scripts', () => {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dist/js/'));
 });
+
+
+// SC5 style guide generator
+
 
 // gulp.task('watch', () => {
 //     gulp.watch('./*.scss', ['css']);
