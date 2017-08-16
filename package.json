@@ -21,9 +21,7 @@
     "gulp-uncss": "^1.0.6",
     "postcss-focus": "^1.0.0",
     "postcss-style-guide": "^0.14.0",
-    "psg-theme-1column": "^0.4.0",
-    "psg-theme-forest": "^0.2.0",
-    "psg-theme-material-design": "0.0.1"
+    "psg-theme-tomato": "^1.0.3"
   },
   "scripts": {
     "start": "browser-sync start --server --files './*.*'"

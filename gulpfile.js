@@ -43,10 +43,10 @@ gulp.task('css', () => {
         // .pipe(csslint.formatter())
         .pipe(postcss([
             styleGuide({
-                project: 'Project name (change it in gulp file)',
+                project: 'Project name',
                 dest: 'styleguide/index.html',
-                showCode: false,
-                theme: '1column' // 1column => npm install psg-theme-1column --save-dev  (google for more if you want a diff theme)
+                showCode: true,
+                theme: 'tomato'
             })
         ]))
         .pipe(htmlReporter({
