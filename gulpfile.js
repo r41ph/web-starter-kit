@@ -87,9 +87,6 @@ gulp.task('scripts', () => {
 });
 
 
-// SC5 style guide generator
-
-
 // gulp.task('watch', () => {
 //     gulp.watch('./*.scss', ['css']);
 // });
