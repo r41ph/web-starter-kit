@@ -1,0 +1,191 @@
+// ***************************************
+// ****** STYLEGUIDE EXAMPLE STARTS ******
+// ***************************************
+
+// https://github.com/morishitter/postcss-style-guide
+// Use Markdown to help generate the styleguide: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
+
+// Color palette
+// No need of using Markup here, it can generate the 
+// color palette from CSS Custom Properties with 
+// @start color and @end color annotations.
+$color-primary: #2E294E;
+$color-secondary: #EFBCD5;
+$color-tertiary: #BE97C6;
+$color-background: #8661C1;
+/* @start color */
+:root {
+    --primary: $color-primary;
+    --secondary: $color-secondary;
+    --tertiary: $color-tertiary;
+    --background: $color-background;
+}
+/* @end color */
+
+
+/*
+@styleguide
+@title Buttons
+
+Use the button classes on and `<a>`, `<button>`, `<input>` elements.
+
+#### => Sizes
+
+<button class="button-large">button-large</button><br>
+<button class="button-medium">button-medium</button><br>
+<button class="button-small">button-small</button>
+
+    <button class="button-large">button-large</button>
+    <button class="button-medium">button-medium</button>
+    <button class="button-small">button-small</button>
+
+*/
+
+.button {
+	display: block;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #999;
+
+    &:hover {
+    	opacity: .8;
+    }
+}
+
+.button-large {
+	@extend .button;
+    padding: 20px 30px;
+    font-size: 16px;
+}
+
+.button-medium {
+	@extend .button;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.button-small {
+	@extend .button;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+
+/*
+
+@styleguide
+
+#### =>Types
+
+<button class="button button-medium button-primary">button-medium button-primary</button><br>
+<button class="button button-medium button-secondary">button-medium button-secondary</button>
+
+    <button class="button button-medium button-primary">Button</button>
+    <button class="button button-medium button-secondary">Button</button>
+
+*/
+.button-primary {
+    background-color: $color-primary;
+}
+
+.button-secondary {
+    background-color: $color-secondary;
+}
+
+
+
+
+
+
+
+/*
+@styleguide
+
+@title Headings
+
+Use the heading tags blah blah.......
+
+<h1>h1.heading</h1>
+	
+	<h1>h1.heading</h1>
+
+<h2>h2.heading</h2>
+	
+	<h2>h2.heading</h2>
+
+<h3>h3.heading</h3>
+	
+	<h3>h3.heading</h3>
+
+<h4>h4.heading</h4>
+	
+	<h4>h4.heading</h4>
+
+<h5>h5.heading</h5>
+	
+	<h5>h5.heading</h5>
+
+<h6>h6.heading</h6>
+	
+	<h6>h6.heading</h6>
+
+*/
+h1 {
+	font-size: 36px;
+}
+h2 {
+	font-size: 32px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 24px;
+}
+h5 {
+	font-size: 20px;
+}
+h6 {
+	font-size: 16px;
+}
+
+// ****** STYLEGUIDE EXAMPLE ENDS ******
+
+
+// Grid CSS
+.content-wrapper {
+	display : grid;
+	grid-template-columns: repeat(12, fr);
+	grid-template-rows: 200px minmax(600px, auto) 100px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+
+	.header {
+		background-color: lighten($color-primary, 30%);
+		border: 1px solid $color-primary;
+		grid-column: 1 / 12;
+		grid-row: 1 / 2;
+	}
+
+	.content {
+		border: 1px solid $color-primary;
+		grid-column: 1 / 10;
+		grid-row: 2 / 3;
+	}
+
+	.sidebar {
+		border: 1px solid $color-primary;
+		grid-column: 10 / 12;
+		grid-row: 2 / 3;
+	}
+
+	.footer {
+		border: 1px solid $color-primary;
+		grid-column: 1 / 12;
+		grid-row: 3 / 4;
+	}
+
+}

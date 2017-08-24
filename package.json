@@ -1,12 +1,16 @@
 {
-  "name": "acw-test",
+  "name": "web-starter-kit",
   "version": "1.0.0",
-  "description": "acw-test",
+  "description": "Starting point for web projects",
   "dependencies": {
-    "gulp-install": "^0.6.0"
+    "chart.js": "^2.6.0",
+    "gulp-install": "^0.6.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.7.0",
@@ -21,11 +25,12 @@
     "gulp-uncss": "^1.0.6",
     "postcss-focus": "^1.0.0",
     "postcss-style-guide": "^0.14.0",
-    "psg-theme-tomato": "^1.0.3"
+    "psg-theme-tomato": "^1.0.3",
+    "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
     "start": "browser-sync start --server --files './*.*'"
   },
-  "author": "rgalan",
+  "author": "ralph",
   "license": "ISC"
 }
