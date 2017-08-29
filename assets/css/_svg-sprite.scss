@@ -1,0 +1,104 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.acw-icon--barcode {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.acw-icon--barcode-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--camera {
+	@extend %svg-common;
+	background-position: 0 11.11111111111111%;
+}
+
+.acw-icon--camera-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--cart {
+	@extend %svg-common;
+	background-position: 0 22.22222222222222%;
+}
+
+.acw-icon--cart-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--github {
+	@extend %svg-common;
+	background-position: 0 33.333333333333336%;
+}
+
+.acw-icon--github-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--hammer {
+	@extend %svg-common;
+	background-position: 0 44.44444444444444%;
+}
+
+.acw-icon--hammer-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--home {
+	@extend %svg-common;
+	background-position: 0 55.55555555555556%;
+}
+
+.acw-icon--home-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--paint-format {
+	@extend %svg-common;
+	background-position: 0 66.66666666666667%;
+}
+
+.acw-icon--paint-format-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--pen {
+	@extend %svg-common;
+	background-position: 0 77.77777777777777%;
+}
+
+.acw-icon--pen-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--pencil {
+	@extend %svg-common;
+	background-position: 0 88.88888888888889%;
+}
+
+.acw-icon--pencil-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.acw-icon--video-camera {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.acw-icon--video-camera-dims {
+	width: 24px;
+	height: 24px;
+}
+
